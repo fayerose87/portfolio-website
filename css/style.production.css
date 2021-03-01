@@ -265,37 +265,37 @@ a.navigation-list__item--active:after, a.navigation-list__item--active:hover::af
 
   @keyframes fadeinanimation {
     0% {
-      opacity: .6;
+      opacity: 0;
     }
     100% {
       opacity: 1;
     }
   }
 
-  .petal1 {
-    -webkit-animation: fadeinanimation 0.5s ease-in;
-            animation: fadeinanimation 0.5s ease-in;
-  }
-
-  .petal2 {
-    -webkit-animation: fadeinanimation 0.5s ease-in;
-            animation: fadeinanimation 0.5s ease-in;
-    -webkit-animation-delay: 0.25s;
-            animation-delay: 0.25s;
+  .petal4 {
+    -webkit-animation: fadeinanimation 0.7s linear;
+            animation: fadeinanimation 0.7s linear;
   }
 
   .petal3 {
-    -webkit-animation: fadeinanimation 0.5s ease-in;
-            animation: fadeinanimation 0.5s ease-in;
-    -webkit-animation-delay: 0.5s;
-            animation-delay: 0.5s;
+    -webkit-animation: fadeinanimation 0.7s linear;
+            animation: fadeinanimation 0.7s linear;
+    -webkit-animation-delay: 0.15s;
+            animation-delay: 0.15s;
   }
 
-  .petal4 {
-    -webkit-animation: fadeinanimation 0.5s ease-in;
-            animation: fadeinanimation 0.5s ease-in;
-    -webkit-animation-delay: 0.75s;
-            animation-delay: 0.75s;
+  .petal2 {
+    -webkit-animation: fadeinanimation 0.7s linear;
+            animation: fadeinanimation 0.7s linear;
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+  }
+
+  .petal1 {
+    -webkit-animation: fadeinanimation 0.7s linear;
+            animation: fadeinanimation 0.7s linear;
+    -webkit-animation-delay: 0.45s;
+            animation-delay: 0.45s;
   }
 
 
