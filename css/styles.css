@@ -227,49 +227,32 @@ a.navigation-list__item--active:after, a.navigation-list__item--active:hover::af
 
   /* ------------------------ Animations ------------------------ */
 
-  @keyframes color-change {
+  @keyframes fadeinanimation {
     0% {
-      fill: #edc655;
-    }
-    50% {
-      fill: #fcffad;
+      opacity: 0;
     }
     100% {
-      fill: #f76414;
+      opacity: 1;
     }
   }
 
-  .sun {
-    animation: 4s color-change infinite alternate linear;
+  .petal1 {
+    animation: fadeinanimation 2s ease;
   }
 
-  @keyframes cloud-move {
-    from {
-      transform: translate(0, 50px);
-    }
-    to {
-      transform: translate(200px, 50px);
-    }
+  .petal2 {
+    animation: fadeinanimation 2s ease;
+    animation-delay: 0.5s;
   }
 
-  .cloud-front {
-    animation: 30s cloud-move infinite alternate linear;
+  .petal3 {
+    animation: fadeinanimation 2s ease;
   }
 
-  @keyframes cloud-move-reverse {
-    from {
-      transform: translate(446px, 48px);
-    }
-    to {
-      transform: translate(100px, 48px);
-    }
+  .petal4 {
+    animation: fadeinanimation 2s ease;
+    animation-delay: 0.5s;
   }
-
-  .cloud-back {
-    animation: 34s cloud-move-reverse infinite alternate linear;
-  }
-
-
 
 
   /* ------------------------ Media Queries ------------------------ */
