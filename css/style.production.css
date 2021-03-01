@@ -254,49 +254,90 @@ a.navigation-list__item--active:after, a.navigation-list__item--active:hover::af
 
   /* ------------------------ Animations ------------------------ */
 
-  @-webkit-keyframes fadeinanimation {
+  @-webkit-keyframes color-change {
     0% {
-      opacity: 0;
+      fill: #edc655;
+    }
+    50% {
+      fill: #fcffad;
     }
     100% {
-      opacity: 1;
+      fill: #f76414;
     }
   }
 
-  @keyframes fadeinanimation {
+  @keyframes color-change {
     0% {
-      opacity: .6;
+      fill: #edc655;
+    }
+    50% {
+      fill: #fcffad;
     }
     100% {
-      opacity: 1;
+      fill: #f76414;
     }
   }
 
-  .petal1 {
-    -webkit-animation: fadeinanimation 0.5s ease-in;
-            animation: fadeinanimation 0.5s ease-in;
+  .sun {
+    -webkit-animation: 4s color-change infinite alternate linear;
+            animation: 4s color-change infinite alternate linear;
   }
 
-  .petal2 {
-    -webkit-animation: fadeinanimation 0.5s ease-in;
-            animation: fadeinanimation 0.5s ease-in;
-    -webkit-animation-delay: 0.25s;
-            animation-delay: 0.25s;
+  @-webkit-keyframes cloud-move {
+    from {
+      -webkit-transform: translate(0, 50px);
+              transform: translate(0, 50px);
+    }
+    to {
+      -webkit-transform: translate(200px, 50px);
+              transform: translate(200px, 50px);
+    }
   }
 
-  .petal3 {
-    -webkit-animation: fadeinanimation 0.5s ease-in;
-            animation: fadeinanimation 0.5s ease-in;
-    -webkit-animation-delay: 0.5s;
-            animation-delay: 0.5s;
+  @keyframes cloud-move {
+    from {
+      -webkit-transform: translate(0, 50px);
+              transform: translate(0, 50px);
+    }
+    to {
+      -webkit-transform: translate(200px, 50px);
+              transform: translate(200px, 50px);
+    }
   }
 
-  .petal4 {
-    -webkit-animation: fadeinanimation 0.5s ease-in;
-            animation: fadeinanimation 0.5s ease-in;
-    -webkit-animation-delay: 0.75s;
-            animation-delay: 0.75s;
+  .cloud-front {
+    -webkit-animation: 30s cloud-move infinite alternate linear;
+            animation: 30s cloud-move infinite alternate linear;
   }
+
+  @-webkit-keyframes cloud-move-reverse {
+    from {
+      -webkit-transform: translate(446px, 48px);
+              transform: translate(446px, 48px);
+    }
+    to {
+      -webkit-transform: translate(100px, 48px);
+              transform: translate(100px, 48px);
+    }
+  }
+
+  @keyframes cloud-move-reverse {
+    from {
+      -webkit-transform: translate(446px, 48px);
+              transform: translate(446px, 48px);
+    }
+    to {
+      -webkit-transform: translate(100px, 48px);
+              transform: translate(100px, 48px);
+    }
+  }
+
+  .cloud-back {
+    -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
+            animation: 34s cloud-move-reverse infinite alternate linear;
+  }
+
+
 
 
   /* ------------------------ Media Queries ------------------------ */
