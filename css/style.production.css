@@ -254,48 +254,27 @@ a.navigation-list__item--active:after, a.navigation-list__item--active:hover::af
 
   /* ------------------------ Animations ------------------------ */
 
-  @-webkit-keyframes fadeinanimation {
+  @-webkit-keyframes color-change {
     0% {
-      opacity: 0;
+      fill: #ee4ea1;
     }
     100% {
-      opacity: 1;
+      fill: #dc1e7e;
     }
   }
 
-  @keyframes fadeinanimation {
+  @keyframes color-change {
     0% {
-      opacity: 0;
+      fill: #ee4ea1;
     }
     100% {
-      opacity: 1;
+      fill: #dc1e7e;
     }
   }
 
-  .petal4 {
-    -webkit-animation: fadeinanimation 0.7s linear;
-            animation: fadeinanimation 0.7s linear;
-  }
-
-  .petal3 {
-    -webkit-animation: fadeinanimation 0.7s linear;
-            animation: fadeinanimation 0.7s linear;
-    -webkit-animation-delay: 0.15s;
-            animation-delay: 0.15s;
-  }
-
-  .petal2 {
-    -webkit-animation: fadeinanimation 0.7s linear;
-            animation: fadeinanimation 0.7s linear;
-    -webkit-animation-delay: 0.3s;
-            animation-delay: 0.3s;
-  }
-
-  .petal1 {
-    -webkit-animation: fadeinanimation 0.7s linear;
-            animation: fadeinanimation 0.7s linear;
-    -webkit-animation-delay: 0.45s;
-            animation-delay: 0.45s;
+  .petal {
+    -webkit-animation: 4s color-change normal ease-out;
+            animation: 4s color-change normal ease-out;
   }
 
 

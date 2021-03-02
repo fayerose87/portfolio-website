@@ -227,31 +227,17 @@ a.navigation-list__item--active:after, a.navigation-list__item--active:hover::af
 
   /* ------------------------ Animations ------------------------ */
 
-  @keyframes fadeinanimation {
+  @keyframes color-change {
     0% {
-      opacity: 0;
+      fill: var(--tertiary-color);
     }
     100% {
-      opacity: 1;
+      fill: var(--primary-color);
     }
   }
 
-  .petal1 {
-    animation: fadeinanimation 2s ease;
-  }
-
-  .petal2 {
-    animation: fadeinanimation 2s ease;
-    animation-delay: 0.5s;
-  }
-
-  .petal3 {
-    animation: fadeinanimation 2s ease;
-  }
-
-  .petal4 {
-    animation: fadeinanimation 2s ease;
-    animation-delay: 0.5s;
+  .petal {
+    animation: 4s color-change normal ease-out;
   }
 
 
