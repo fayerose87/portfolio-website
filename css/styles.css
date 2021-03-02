@@ -55,11 +55,11 @@ a {
 
 a:visited {
   /* visited link */
-  color: var(--tertiary-color);
+  color: var(--secondary-color);
 }
 
 a:hover, a:focus {
-  color: var(--tertiary-color);
+  color: var(--secondary-color);
 }
 
 a:active {
