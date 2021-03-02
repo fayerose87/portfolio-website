@@ -11,8 +11,9 @@ Colors used
 
 Text Color (Dark Gray): #1e1e1e;
 Primary Color (Pink): #dc1e7e;
-Secondary Color (Lighter Pink): #ee4ea1;
 Secondary Color (Darker Pink): #950e54
+Tertiary Color (Lighter Pink): #f171b3;
+
 */
 
 * {
@@ -172,8 +173,6 @@ a.navigation-list__item--active:after, a.navigation-list__item--active:hover::af
   -o-transition: none;
   transition: none;
 }
-
-
 /* ------------------------ Homepage ------------------------ */
 .profile {
   max-width: 700px;
@@ -238,76 +237,113 @@ a.navigation-list__item--active:after, a.navigation-list__item--active:hover::af
   }
 }
 
-  /* ------------------------ All Pages Footer ------------------------ */
-  .page-footer {
-    clear: both;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: center;
-    background-color: #000000;
-    color: #FFFFFF;
-  }
+/* ------------------------ Footer ------------------------ */
+.page-footer {
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  background-color: #000000;
+  color: #FFFFFF;
+}
 
-  /* ------------------------ Animations ------------------------ */
+a.phone:visited  {
+  color: #f171b3;
+}
 
-  @-webkit-keyframes color-change {
-    0% {
-      fill: #f171b3;
-    }
-    100% {
-      fill: #dc1e7e;
-    }
-  }
+a.phone:hover  {
+  color: #f171b3;
+}
 
-  @keyframes color-change {
-    0% {
-      fill: #f171b3;
-    }
-    100% {
-      fill: #dc1e7e;
-    }
-  }
+a.phone:focus  {
+  color: #f171b3;
+}
 
-  .petal {
-    -webkit-animation: 4s color-change normal ease-out;
-            animation: 4s color-change normal ease-out;
-  }
+a.phone:active  {
+  color: #f171b3;
+}
+
+a.email:visited  {
+  color: #f171b3;
+}
+
+a.email:hover  {
+  color: #f171b3;
+}
+
+a.email:focus  {
+  color: #f171b3;
+}
+
+a.email:active  {
+  color: #f171b3;
+}
+
+  {
+  color: undefined;
+}
 
 
-  /* ------------------------ Media Queries ------------------------ */
+/* ------------------------ Animations ------------------------ */
 
-  @media all and (max-width: 750px) {
-    .grid {
-      grid-gap: 10px;
-    }
-    .grid__item {
-      padding: 15px
-    }
-    .grid__item:last-child {
-      grid-column: auto / auto;
-      grid-row: auto / auto;
-    }
+@-webkit-keyframes color-change {
+  0% {
+    fill: #f171b3;
   }
-  @media all and (min-width: 500px) and (max-width: 750px) {
-    .grid {
-      -ms-grid-columns: 1fr 10px 1fr;
-      grid-template-columns: 1fr 1fr;
-    }
+  100% {
+    fill: #dc1e7e;
   }
-  @media all and (max-width: 500px) {
-    .grid {
-      -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-    }
-    h1 {
-      font-size: 24px;
-    }
-    h2 {
-      font-size: 20px;
-    }
+}
+
+@keyframes color-change {
+  0% {
+    fill: #f171b3;
   }
+  100% {
+    fill: #dc1e7e;
+  }
+}
+
+.petal {
+  -webkit-animation: 4s color-change normal ease-out;
+          animation: 4s color-change normal ease-out;
+}
+
+
+/* ------------------------ Media Queries ------------------------ */
+
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item {
+    padding: 15px
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+    -ms-grid-columns: 1fr 10px 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 500px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+}

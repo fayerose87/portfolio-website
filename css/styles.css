@@ -4,8 +4,9 @@ Colors used
 
 Text Color (Dark Gray): #1e1e1e;
 Primary Color (Pink): #dc1e7e;
-Secondary Color (Lighter Pink): #ee4ea1;
 Secondary Color (Darker Pink): #950e54
+Tertiary Color (Lighter Pink): #f171b3;
+
 */
 :root {
   --primary-color: #dc1e7e;
@@ -55,7 +56,7 @@ a {
 
 a:visited {
   /* visited link */
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 a:hover, a:focus {
@@ -155,8 +156,6 @@ a.navigation-list__item--active:after, a.navigation-list__item--active:hover::af
   background: none;
   transition: none;
 }
-
-
 /* ------------------------ Homepage ------------------------ */
 .profile {
   max-width: 700px;
@@ -216,59 +215,65 @@ a.navigation-list__item--active:after, a.navigation-list__item--active:hover::af
   }
 }
 
-  /* ------------------------ All Pages Footer ------------------------ */
-  .page-footer {
-    clear: both;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    background-color: #000000;
-    color: #FFFFFF;
-  }
+/* ------------------------ Footer ------------------------ */
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #000000;
+  color: #FFFFFF;
+}
 
-  /* ------------------------ Animations ------------------------ */
-
-  @keyframes color-change {
-    0% {
-      fill: var(--tertiary-color);
-    }
-    100% {
-      fill: var(--primary-color);
-    }
-  }
-
-  .petal {
-    animation: 4s color-change normal ease-out;
-  }
+a.phone:visited, a.phone:hover, a.phone:focus, a.phone:active,
+a.email:visited, a.email:hover, a.email:focus, a.email:active,  {
+  color: var(--tertiary-color);
+}
 
 
-  /* ------------------------ Media Queries ------------------------ */
+/* ------------------------ Animations ------------------------ */
 
-  @media all and (max-width: 750px) {
-    .grid {
-      grid-gap: 10px;
-    }
-    .grid__item {
-      padding: 15px
-    }
-    .grid__item:last-child {
-      grid-column: auto / auto;
-      grid-row: auto / auto;
-    }
+@keyframes color-change {
+  0% {
+    fill: var(--tertiary-color);
   }
-  @media all and (min-width: 500px) and (max-width: 750px) {
-    .grid {
-      grid-template-columns: 1fr 1fr;
-    }
+  100% {
+    fill: var(--primary-color);
   }
-  @media all and (max-width: 500px) {
-    .grid {
-      grid-template-columns: 1fr;
-    }
-    h1 {
-      font-size: 24px;
-    }
-    h2 {
-      font-size: 20px;
-    }
+}
+
+.petal {
+  animation: 4s color-change normal ease-out;
+}
+
+
+/* ------------------------ Media Queries ------------------------ */
+
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
   }
+  .grid__item {
+    padding: 15px
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+}
