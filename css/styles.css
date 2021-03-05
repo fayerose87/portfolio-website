@@ -1,17 +1,18 @@
 /* ------------------------ All Page Effects ------------------------ */
+
 /*
 Colors used
-
 Text Color (Dark Gray): #1e1e1e;
 Primary Color (Pink): #dc1e7e;
 Secondary Color (Darker Pink): #950e54
 Tertiary Color (Lighter Pink): #f171b3;
+*/
 
 */
 :root {
   --primary-color: #dc1e7e;
   --secondary-color: #950e54;
-  --tertiary-color:  #f171b3;
+  --tertiary-color: #f171b3;
   --dark-grey: #1e1e1e;
   --font-bold: 700;
 }
@@ -24,9 +25,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 16px;
-  /* Sets the font size to 16px */
   line-height: 1.6;
-  /* Sets the line-height to 1.6 */
   color: var(--dark-grey);
 }
 
@@ -59,7 +58,8 @@ a:visited {
   color: var(--primary-color);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: var(--secondary-color);
 }
 
@@ -69,32 +69,38 @@ a:active {
 }
 
 button,
-.button, .button:visited {
+.button,
+.button:visited {
   /* overwrites browser defaults and resets the border */
   border: none;
   display: inline-block;
+
   /* takes the font from the outer container */
   font-family: inherit;
   font-weight: 700;
+
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-  background-color: #000000;
-  color: #FFFFFF;
+  background-color: #000;
+  color: #fff;
   text-decoration: none;
-  /*adds spacing to the button (this will be discussed more in-depth later) */
   padding: 10px;
   border-radius: 3px;
+
   /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   transition: 0.2s opacity;
 }
 
-button:hover, button:focus,
-.button:hover, .button:focus {
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
+
   /* reduces the opacity of the button to 80% */
   opacity: 0.8;
-  color: #FFFFFF;
+  color: #fff;
 }
 
 .button__secondary {
@@ -102,12 +108,11 @@ button:hover, button:focus,
 }
 
 /* ------------------------ Header for all pages ------------------------ */
-
 .page-header {
   display: flex;
   width: 100%;
   padding: 20px;
-  color: #FFFFFF;
+  color: #fff;
 }
 
 .page-header__item {
@@ -131,10 +136,10 @@ button:hover, button:focus,
 }
 
 a.navigation-list__item {
-  position:relative;
+  position: relative;
 }
 
-a.navigation-list__item:after {
+a.navigation-list__item::after {
   position: absolute;
   width: 0%;
   height: 3px;
@@ -143,43 +148,40 @@ a.navigation-list__item:after {
   transition: all 0.3s;
   margin-bottom: -3px;
   left: 0;
-  bottom:0;
+  bottom: 0;
 }
 
-a.navigation-list__item:hover:after
-{
+a.navigation-list__item:hover::after {
   width: 100%;
 }
 
-a.navigation-list__item--active:after, a.navigation-list__item--active:hover::after {
+a.navigation-list__item--active::after,
+a.navigation-list__item--active:hover::after {
   height: 0;
   background: none;
   transition: none;
 }
+
 /* ------------------------ Homepage ------------------------ */
 .profile {
   max-width: 700px;
-  margin-top:0;
-  margin-bottom:40px;
-  margin-left:auto;
-  margin-right:auto;
+  margin: 0 auto 40px;
+  margin-bottom: 40px;
 }
 
-.profile__portrait{
+.profile__portrait {
   float: left;
   width: 250px;
-  margin-right: 40px;
-  margin-bottom: 40px;
-  border-radius:50%;
+  margin: 0 40px 40px 0;
+  border-radius: 50%;
 }
 
 /* ------------------------ About, Work, Contact Pages ------------------------ */
-.about, .work, .contact {
+.about,
+.work,
+.contact {
   max-width: 700px;
-  margin-top:0;
-  margin-bottom:40px;
-  margin-left:auto;
-  margin-right:auto;
+  margin: 0 auto 40px;
 }
 
 .contact {
@@ -191,11 +193,12 @@ a.navigation-list__item--active:after, a.navigation-list__item--active:hover::af
   display: inline-block;
   width: 33%;
 }
-/* end grid fallback */
 
+/* end grid fallback */
 @supports (display: grid) {
   .grid {
     display: grid;
+
     /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
@@ -215,7 +218,8 @@ a.navigation-list__item--active:after, a.navigation-list__item--active:hover::af
   }
 }
 
-th, td {
+th,
+td {
   padding: 15px;
   text-align: left;
   border-bottom: 1px solid #ddd;
@@ -227,22 +231,27 @@ th, td {
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: #000000;
-  color: #FFFFFF;
+  background-color: #000;
+  color: #fff;
 }
 
-a.phone:visited, a.phone:hover, a.phone:focus, a.phone:active,
-a.email:visited, a.email:hover, a.email:focus, a.email:active,  {
+a.phone:visited,
+a.phone:hover,
+a.phone:focus,
+a.phone:active,
+a.email:visited,
+a.email:hover,
+a.email:focus,
+a.email:active {
   color: var(--tertiary-color);
 }
 
-
 /* ------------------------ Animations ------------------------ */
-
 @keyframes color-change {
   0% {
     fill: var(--tertiary-color);
   }
+
   100% {
     fill: var(--primary-color);
   }
@@ -252,33 +261,37 @@ a.email:visited, a.email:hover, a.email:focus, a.email:active,  {
   animation: 4s color-change normal ease-out;
 }
 
-
 /* ------------------------ Media Queries ------------------------ */
-
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item {
-    padding: 15px
+    padding: 15px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
 }
+
 @media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
   }
+
   h1 {
     font-size: 24px;
   }
+
   h2 {
     font-size: 20px;
   }
