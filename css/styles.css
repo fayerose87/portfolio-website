@@ -326,4 +326,8 @@ a.email:active {
   #fayerose_logo {
     zoom: 90%;
   }
+
+  a.navigation-list__item {
+    font-size: 14px;
+  }
 }
