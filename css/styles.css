@@ -318,8 +318,8 @@ a.email:active {
   }
 
   .profile__portrait {
-      float: none;
-      display: block;
-      margin: 0 auto;
-    }
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
 }
