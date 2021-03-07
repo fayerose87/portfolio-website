@@ -300,9 +300,14 @@ a.email:active {
     font-size: 20px;
   }
 
+  .page-header__item {
+    flex: auto;
+  }
+
   .navigation-list li {
     position: static;
     display: block;
+    margin-left: 15px;
   }
 
   .profile,
@@ -310,7 +315,7 @@ a.email:active {
   .work,
   .contact {
     text-align: center;
-    margin: 20px;
+    margin: 15px;
   }
 
   .profile__portrait {
