@@ -359,6 +359,10 @@ a.email:active {
     font-size: 20px;
   }
 
+  body {
+    font-size: 14px;
+  }
+
   .navigation-list li {
     position: static;
     display: block;
@@ -384,5 +388,9 @@ a.email:active {
 
   #fayerose_logo {
     zoom: 90%;
+  }
+
+  a.navigation-list__item {
+    font-size: 14px
   }
 }
