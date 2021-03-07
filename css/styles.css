@@ -306,11 +306,14 @@ a.email:active {
     margin-right: 15px;
   }
 
-  .profile,
+  .profile {
+    text-align: center;
+    margin: 15px;
+  }
+
   .about,
   .work,
   .contact {
-    text-align: center;
     margin: 15px;
   }
 
