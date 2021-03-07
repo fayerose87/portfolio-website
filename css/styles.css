@@ -280,6 +280,11 @@ a.email:active {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  .navigation-list li {
+    position: static;
+    display: block;
+  }
 }
 
 @media all and (max-width: 500px) {
@@ -294,4 +299,23 @@ a.email:active {
   h2 {
     font-size: 20px;
   }
+
+  .navigation-list li {
+    position: static;
+    display: block;
+  }
+
+  .profile,
+  .about,
+  .work,
+  .contact {
+    text-align: center;
+    margin: 20px;
+  }
+
+  .profile__portrait {
+      float: none;
+      display: block;
+      margin: 0 auto;
+    }
 }
