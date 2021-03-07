@@ -381,4 +381,8 @@ a.email:active {
     display: block;
     margin: 0 auto;
   }
+
+  #fayerose_logo {
+    zoom: 90%;
+  }
 }
