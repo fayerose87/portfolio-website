@@ -26,371 +26,42 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: #1e1e1e;
+  text-align: center;
+  position: relative;
 }
 
 h1 {
   color: #dc1e7e;
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
 h2 {
   color: #dc1e7e;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 h3 {
   color: #950e54;
   font-size: 18px;
-  font-weight: 700;
-}
-
-a {
-  color: #dc1e7e;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-a:visited {
-  /* visited link */
-  color: #dc1e7e;
-}
-
-a:hover {
-  color: #950e54;
-}
-
-a:focus {
-  color: #950e54;
-}
-
-a:active {
-  /* selected link */
-  color: #950e54;
-}
-
-button,
-.button,
-.button:visited {
-  /* overwrites browser defaults and resets the border */
-  border: none;
-  display: inline-block;
-
-  /* takes the font from the outer container */
-  font-family: inherit;
-  font-weight: 700;
-
-  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-  background-color: #000;
-  color: #fff;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
-
-  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  -webkit-transition: 0.2s opacity;
-  -o-transition: 0.2s opacity;
-  transition: 0.2s opacity;
-}
-
-button:hover,
-button:focus,
-.button:hover,
-.button:focus {
-  /* lets the mouse appear as a hand when hovering over the button */
-  cursor: pointer;
-
-  /* reduces the opacity of the button to 80% */
-  opacity: 0.8;
-  color: #fff;
-}
-
-.button__secondary {
-  background-color: #950e54;
-}
-
-/* ------------------------ Header for all pages ------------------------ */
-.page-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  padding: 20px;
-  color: #fff;
-}
-
-.page-header__item {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 1 200px;
-  flex: 0 1 200px;
-}
-
-.page-header__item:last-child {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  text-align: right;
-}
-
-.navigation-list li {
-  list-style-type: none;
-  display: inline-block;
-  margin-left: 15px;
-  text-transform: uppercase;
-}
-
-.navigation-list__item--active {
-  border-bottom: 3px solid #950e54;
-}
-
-a.navigation-list__item {
-  position: relative;
-}
-
-a.navigation-list__item::after {
-  position: absolute;
-  width: 0%;
-  height: 3px;
-  content: '';
-  background: #950e54;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  margin-bottom: -3px;
-  left: 0;
-  bottom: 0;
-}
-
-a.navigation-list__item:hover::after {
-  width: 100%;
-}
-
-a.navigation-list__item--active::after,
-a.navigation-list__item--active:hover::after {
-  height: 0;
-  background: none;
-  -webkit-transition: none;
-  -o-transition: none;
-  transition: none;
-}
-
-/* ------------------------ Homepage ------------------------ */
-.profile {
-  max-width: 700px;
-  margin: 0 auto 40px;
-  margin-bottom: 40px;
+  font-weight: 600;
 }
 
 .profile__portrait {
-  float: left;
-  width: 250px;
-  margin: 0 40px 40px 0;
+  width: 200px;
+  margin: auto;
   border-radius: 50%;
+  display: block;
+  margin-bottom: 20px;
 }
 
-/* ------------------------ About, Work, Contact Pages ------------------------ */
-.about,
-.work,
-.contact {
-  max-width: 700px;
-  margin: 0 auto 40px;
+.btn {
+  margin-bottom: 1rem;
 }
 
-.contact {
-  text-align: center;
-}
-
-/* start grid fallback */
-.grid__item {
-  display: inline-block;
-  width: 33%;
-}
-
-/* end grid fallback */
-@supports (display: grid) {
-  .grid {
-    display: -ms-grid;
-    display: grid;
-
-    /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
-    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-  }
-
-  .grid__item {
-    background-color: #f9f9f9;
-    width: auto;
-    min-height: auto;
-    margin: 0;
-    padding: 20px;
-  }
-
-  .grid__item:last-child {
-    -ms-grid-column: 3;
-    grid-column: 3 / 3;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    grid-row: 1 / 3;
-  }
-}
-
-th,
-td {
-  padding: 15px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-/* ------------------------ Footer ------------------------ */
-.page-footer {
-  clear: both;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  text-align: center;
-  background-color: #000;
-  color: #fff;
-}
-
-a.phone:visited {
-  color: #f171b3;
-}
-
-a.phone:hover {
-  color: #f171b3;
-}
-
-a.phone:focus {
-  color: #f171b3;
-}
-
-a.phone:active {
-  color: #f171b3;
-}
-
-a.email:visited {
-  color: #f171b3;
-}
-
-a.email:hover {
-  color: #f171b3;
-}
-
-a.email:focus {
-  color: #f171b3;
-}
-
-a.email:active {
-  color: #f171b3;
-}
-
-/* ------------------------ Animations ------------------------ */
-@-webkit-keyframes color-change {
-  0% {
-    fill: #f171b3;
-  }
-
-  100% {
-    fill: #dc1e7e;
-  }
-}
-
-@keyframes color-change {
-  0% {
-    fill: #f171b3;
-  }
-
-  100% {
-    fill: #dc1e7e;
-  }
-}
-
-.petal {
-  -webkit-animation: 4s color-change normal ease-out;
-  animation: 4s color-change normal ease-out;
-}
-
-/* ------------------------ Media Queries ------------------------ */
-@media all and (max-width: 750px) {
-  .grid {
-    grid-gap: 10px;
-  }
-
-  .grid__item {
-    padding: 15px;
-  }
-
-  .grid__item:last-child {
-    grid-column: auto / auto;
-    grid-row: auto / auto;
-  }
-}
-
-@media all and (min-width: 500px) and (max-width: 750px) {
-  .grid {
-    -ms-grid-columns: 1fr 10px 1fr;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .navigation-list li {
-    position: static;
-    display: block;
-  }
-}
-
-@media all and (max-width: 500px) {
-  .grid {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-  }
-
-  h1 {
-    font-size: 24px;
-  }
-
-  h2 {
-    font-size: 20px;
-  }
-
-  body {
-    font-size: 14px;
-  }
-
-  .navigation-list li {
-    position: static;
-    display: block;
-    margin-right: 15px;
-  }
-
-  .profile {
-    text-align: center;
-    margin: 15px;
-  }
-
-  .about,
-  .work,
-  .contact {
-    margin: 15px;
-  }
-
-  .profile__portrait {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-
-  #fayerose_logo {
-    zoom: 90%;
-  }
-
-  a.navigation-list__item {
-    font-size: 14px;
-  }
+.copyright {
+  color: #dc1e7e;
 }
