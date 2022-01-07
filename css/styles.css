@@ -681,7 +681,7 @@ a>code {
 .btn-secondary:not(:disabled):not(.disabled).active,
 .btn-secondary:not(:disabled):not(.disabled):active {
 	color: #fff;
-	background-color: #00;
+	background-color: #000;
 }
 
 .btn-secondary:not(:disabled):not(.disabled).active:focus,
@@ -1226,7 +1226,6 @@ button.close {
 }
 
 .modal-dialog {
-	top: 20%;
 	position: relative;
 	width: auto;
 	margin: .5rem;
